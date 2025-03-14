@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis XV!!!</title>
+    <link rel="stylesheet" href="./scss/styles.css" />
+  </head>
+  <body>
+    <div class="width-error">
+      <div class="error-text">
+        <h1>Ups!!!</h1>
+        <p>Pagina web solo disponible es dispositivos moviles</p>
+      </div>
+    </div>
+
+    <main>
+      <section id="inicio">
+        <!-- <h1>Xcaret</h1> -->
+
+        <div class="container">
+          <div class="myXV">
+            <div class="line"></div>
+            <div class="text">MIS XV AÑOS</div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="container-2divs">
+        <div class="playMusic">
+          <figure>
+            <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img1" />
+            <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img2" />
+          </figure>
+
+          <img
+            src="./imgs/decoration/fondoMusic.png"
+            alt="Imagen"
+            class="img3"
+          />
+
+          <div class="player-container">
+            <h2>Dale play a mi canción favorita</h2>
+            <audio id="audio" loop>
+              <source src="./music/music.mp3" type="audio/mpeg" />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+
+            <div class="controls">
+              <!-- Botón Stop -->
+              <button id="stop" class="btn btnStop">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m4.836 12l6.207 6.207l1.414-1.414L7.664 12l4.793-4.793l-1.414-1.414zm5.65 0l6.207 6.207l1.414-1.414L13.314 12l4.793-4.793l-1.414-1.414z"
+                  />
+                </svg>
+              </button>
+
+              <!-- Botón Play/Pause -->
+              <button id="playPause" class="btn">
+                <svg
+                  id="playIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 28 28"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M10.138 3.382C8.304 2.31 6 3.632 6 5.756v16.489c0 2.123 2.304 3.445 4.138 2.374l14.697-8.59c1.552-.907 1.552-3.15 0-4.057z"
+                  />
+                </svg>
+
+                <svg
+                  id="pauseIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M6.75 3a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2m6.5 0a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+
+              <!-- Botón Stop -->
+              <button class="btn btnStop btnExtra">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m19.164 12l-6.207-6.207l-1.414 1.414L16.336 12l-4.793 4.793l1.414 1.414zm-5.65 0L7.307 5.793L5.893 7.207L10.686 12l-4.793 4.793l1.414 1.414z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="div-border">
+          <div class="text-message">
+            <figure>
+              <img src="./imgs/corner/border1.png" alt="Imagen" class="img1" />
+
+              <!-- 
+              <img src="./imgs/corner/corner4.png" alt="Imagen" class="img1" />
+              <img src="./imgs/corner/corner4.png" alt="Imagen" class="img2" />
+            <img src="./imgs/corner/corner3.png" alt="Imagen" class="img3" />
+            <img src="./imgs/corner/corner3.png" alt="Imagen" class="img4" /> -->
+            </figure>
+            <p class="body">
+              Hay eventos en la vida que son muy especiales por si solos, pero
+              poder compartilos con quienes más Quiero, los convierte en
+              momentos únicos e inolvidables.
+            </p>
+            <p class="foot">¡Te esperamos en mi fiesta!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Countdown"></section>
+
+      <section id="Info"></section>
+
+      <section id="DressCode"></section>
+
+      <section id="Asistencia"></section>
+
+      <section id="Gifts"></section>
+
+      <section id="Galery"></section>
+    </main>
+  </body>
+  <script src="./scrips.js"></script>
+</html>
