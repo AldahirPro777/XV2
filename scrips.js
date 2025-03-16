@@ -31,3 +31,33 @@ audio.addEventListener("timeupdate", () => {
   const progress = (audio.currentTime / audio.duration) * 100;
   progressBar.style.width = progress + "%";
 });
+
+//? CountDown Timer
+function updateCountdown() {
+  const targetDate = new Date("April 26, 2025 00:00:00").getTime();
+  const now = new Date().getTime();
+  const difference = targetDate - now;
+
+  if (difference <= 0) {
+    document.getElementById("days").innerText = "0";
+    document.getElementById("hours").innerText = "0";
+    document.getElementById("minutes").innerText = "0";
+    document.getElementById("seconds").innerText = "0";
+    return;
+  }
+
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Ejecuta la función inmediatamente para evitar el retraso inicial

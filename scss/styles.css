@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Great+Vibes&family=Monsieur+La+Doulaise&family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Great+Vibes&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -65,25 +64,33 @@ body {
     display: flex;
   }
 }
-main #inicio {
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  /* #DressCode {
+  } */
+}
+main #Inicio {
   background-image: url("../imgs/xcaret/img2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 60vh;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
   padding: 20px;
 }
 @media (max-width: 465px) {
-  main #inicio #inicio {
+  main #Inicio #inicio {
     background-position: -200px center;
   }
 }
-main #inicio h1 {
+main #Inicio h1 {
   font-family: Great Vibes;
   letter-spacing: 5px;
   font-size: 4rem;
@@ -93,7 +100,7 @@ main #inicio h1 {
   left: 50%;
   transform: translateX(-50%);
 }
-main #inicio .container {
+main #Inicio .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,77 +110,69 @@ main #inicio .container {
   left: 50%;
   transform: translateX(-50%);
 }
-main #inicio .myXV {
+main #Inicio .myXV {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
   width: 100%;
   font-family: Cinzel;
 }
-main #inicio .line {
+main #Inicio .line {
   width: 35vw;
   height: 2px;
   background: #fff;
 }
-main #inicio .text {
+main #Inicio .text {
   font-size: 1.3rem;
   font-weight: bold;
   color: #fff;
   width: 100%;
   text-align: center;
 }
-main #container-2divs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+main #Container-2divs {
   gap: 20px;
-  background-color: beige;
   padding: 30px 0;
+  background-image: url("../imgs/decoration/paper.png");
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+  background-position: center;
 }
-main #container-2divs .playMusic {
+main #Container-2divs .playMusic {
   border-top: 2px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-direction: column;
   width: 90%;
-  height: 25vh;
   border: 2px solid burlywood;
   position: relative;
-  border-end-start-radius: 20px;
+  z-index: 1;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-main #container-2divs .playMusic figure img {
+main #Container-2divs .playMusic figure img {
   position: absolute;
   width: 150px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
 }
-main #container-2divs .playMusic figure .img1 {
+main #Container-2divs .playMusic figure .img1 {
   transform: rotate(180deg);
   left: -25px;
   top: -25px;
 }
-main #container-2divs .playMusic figure .img2 {
+main #Container-2divs .playMusic figure .img2 {
   right: -25px;
   bottom: -25px;
 }
-main #container-2divs .playMusic .img3 {
-  position: absolute;
-  width: 102%;
-  height: 101%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-}
-main #container-2divs .playMusic .player-container {
+main #Container-2divs .playMusic .player-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-direction: column;
   padding: 20px;
   text-align: center;
@@ -181,7 +180,7 @@ main #container-2divs .playMusic .player-container {
   color: #000;
   z-index: 1;
 }
-main #container-2divs .playMusic .controls {
+main #Container-2divs .playMusic .controls {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,7 +189,7 @@ main #container-2divs .playMusic .controls {
   width: 70%;
   border: 2px solid rgb(161, 138, 79);
 }
-main #container-2divs .playMusic .btn {
+main #Container-2divs .playMusic .btn {
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -202,54 +201,76 @@ main #container-2divs .playMusic .btn {
   width: 4rem;
   height: 4rem;
 }
-main #container-2divs .playMusic .btnStop {
+main #Container-2divs .playMusic .btnStop {
   scale: 1.2;
   transform: translateY(2px);
 }
-main #container-2divs .playMusic .btnStop:hover {
+main #Container-2divs .playMusic .btnStop:hover {
   transform: translateY(2px) scale(1.1);
 }
-main #container-2divs .div-border {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 90%;
-  height: 25vh;
-  border: 2px solid burlywood;
-  position: relative;
-  border-radius: 20px;
+main #Countdown {
+  background-image: url("../imgs/xcaret/img3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  color: #fff;
 }
-main #container-2divs .div-border figure img {
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main #container-2divs .div-border figure .img1 {
-  transform: rotate(90deg);
-  left: 0;
-  bottom: 0;
-}
-main #container-2divs .div-border figure .img2 {
-  transform: rotate(0deg);
-  right: 0;
-  top: 0;
-}
-main #container-2divs .text-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-}
-main #container-2divs .text-message .body {
-  padding: 20px;
+main #Countdown h1,
+main #Countdown h2,
+main #Countdown h3 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+main #Countdown h1 {
+  font-size: 3.5rem;
+  font-family: Great Vibes;
+  margin-bottom: 80px;
+}
+main #Countdown h2 {
+  font-size: 2.5rem;
+  font-family: Great Vibes;
+  margin-top: 40px;
+}
+main #Countdown h3 {
   font-size: 1rem;
-  width: 75%;
-  color: #000;
-  z-index: 1;
+}
+main #Countdown .countdown-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+main #Countdown .countdown-container .separador {
+  font-size: 3.5rem;
+}
+main #Countdown .countdown-container #hours,
+main #Countdown .countdown-container #minutes {
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 50%;
+}
+main #Countdown .countdown-container .countdown-item {
+  padding: 5px;
+  text-align: center;
+  font-family: Cinzel;
+}
+main #Countdown .countdown-container .countdown-item .countdown-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+main #Countdown .countdown-container .countdown-item .countdown-text {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+main #Info .iglesia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #Info .salon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */

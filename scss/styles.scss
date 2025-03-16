@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Great+Vibes&family=Monsieur+La+Doulaise&family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Great+Vibes&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap");
 
 @mixin display-flex {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 * {
@@ -78,8 +78,12 @@ body {
   }
 }
 
+section {
+  @include display-flex;
+}
+
 main {
-  #inicio {
+  #Inicio {
     background-image: url("../imgs/xcaret/img2.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -87,7 +91,6 @@ main {
     height: 60vh;
 
     position: relative;
-    @include display-flex;
     justify-content: space-between;
     padding: 20px;
 
@@ -142,22 +145,24 @@ main {
     }
   }
 
-  #container-2divs {
-    @include display-flex;
-    flex-direction: column;
+  #Container-2divs {
     gap: 20px;
-    background-color: beige;
     padding: 30px 0;
+    background-image: url("../imgs/decoration/paper.png");
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+    background-position: center;
 
     .playMusic {
       border-top: 2px solid #000;
       @include display-flex;
       flex-direction: column;
       width: 90%;
-      height: 25vh;
       border: 2px solid burlywood;
       position: relative;
-      border-end-start-radius: 20px;
+      z-index: 1;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
 
       figure {
         img {
@@ -165,6 +170,7 @@ main {
           width: 150px;
           height: 200px;
           object-fit: cover;
+          z-index: 1;
         }
 
         .img1 {
@@ -177,17 +183,6 @@ main {
           right: -25px;
           bottom: -25px;
         }
-      }
-
-      .img3 {
-        position: absolute;
-        width: 102%;
-        height: 101%;
-        object-fit: cover;
-        top: 50%;
-        left: 50%;
-        z-index: -1;
-        transform: translate(-50%, -50%);
       }
 
       .player-container {
@@ -232,53 +227,83 @@ main {
         }
       }
     }
+  }
 
-    .div-border {
-      @include display-flex;
-      flex-direction: column;
-      width: 90%;
-      height: 25vh;
-      border: 2px solid burlywood;
-      position: relative;
-      border-radius: 20px;
+  #Countdown {
+    background-image: url("../imgs/xcaret/img3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-      figure {
-        img {
-          position: absolute;
-          
-          object-fit: cover;
-        }
+    height: 80vh;
+    color: #fff;
 
-        .img1 {
-          transform: rotate(90deg);
-          left: 0;
-          bottom: 0;
-        }
-
-        .img2 {
-          transform: rotate(0deg);
-          right: 0;
-          top: 0;
-        }
-      }
+    h1,
+    h2,
+    h3 {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      text-align: center;
     }
 
-    .text-message {
-      @include display-flex;
-      flex-direction: column;
-      width: 100%;
-      position: relative;
-      border-radius: 30px;
-      overflow: hidden;
+    h1 {
+      font-size: 3.5rem;
+      font-family: Great Vibes;
+      margin-bottom: 80px;
+    }
 
-      .body {
-        padding: 20px;
+    h2 {
+      font-size: 2.5rem;
+      font-family: Great Vibes;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      .separador {
+        font-size: 3.5rem;
+      }
+
+      #hours,
+      #minutes {
+        backdrop-filter: blur(1px);
+        border-radius: 50%;
+      }
+
+      .countdown-item {
+        padding: 5px;
         text-align: center;
-        font-size: 1rem;
-        width: 75%;
-        color: #000;
-        z-index: 1;
+        font-family: Cinzel;
+
+        .countdown-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        .countdown-text {
+          font-size: 1rem;
+          opacity: 0.8;
+        }
       }
     }
   }
+
+  #Info {
+    .iglesia {
+      @include display-flex;
+    }
+
+    .salon {
+      @include display-flex;
+    }
+  }
+
+  /* #DressCode {
+  } */
 }
