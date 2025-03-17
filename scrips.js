@@ -1,3 +1,5 @@
+//? BTNS Audio
+
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("playPause");
 const playIcon = document.getElementById("playIcon");
@@ -60,4 +62,4 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
-updateCountdown(); // Ejecuta la función inmediatamente para evitar el retraso inicial
+updateCountdown();
