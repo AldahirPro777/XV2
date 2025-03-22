@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Great+Vibes&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;900&family=Allura&family=Tangerine:wght@400;700&family=Montserrat:wght@300;400&family=Raleway:wght@300;400&family=Poppins:wght@300;400&family=Quattrocento:wght@400;700&family=Fredoka:wght@300;400;700&family=Cinzel:wght@400;700&family=Monsieur+La+Doulaise&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +7,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 }
 
 html {
@@ -18,31 +18,32 @@ html body {
   -ms-overflow-style: none;
 }
 html .width-error {
-  display: none;
-  height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(125deg, #333, #000);
+  flex-direction: column;
+  display: none;
+  height: 100vh;
 }
 html .width-error .error-text {
-  background: white;
+  background-color: #fff;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   max-width: 400px;
-  width: 90%;
   animation: fadeIn 0.5s ease-in-out;
 }
 html .width-error .error-text h1 {
   text-align: center;
   font-size: 2.5rem;
-  color: #ff4757;
+  color: darkred;
   margin-bottom: 10px;
 }
 html .width-error .error-text p {
   text-align: center;
   font-size: 1.2rem;
   color: #333;
+  font-weight: 600;
 }
 @keyframes fadeIn {
   from {
@@ -54,8 +55,15 @@ html .width-error .error-text p {
     transform: scale(1);
   }
 }
-@media (min-width: 700px) {
-  html main {
+@media (min-width: 650px) {
+  html #Inicio,
+  html #divs2,
+  html #Countdown,
+  html #Info,
+  html #DressCode,
+  html #RSVP,
+  html #Gallery,
+  html #Gifts {
     display: none;
   }
   html .width-error {
@@ -67,14 +75,22 @@ html section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
-}
-
-main #Inicio {
-  background-image: url("../imgs/xcaret/img2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
+  width: 100%;
+}
+
+main {
+  background-image: url("../imgs/decoration/fondo2divs.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+main #Inicio {
+  background-image: url("../imgs/xcaret/img2.jpg");
   height: 60vh;
   position: relative;
   justify-content: space-between;
@@ -86,7 +102,7 @@ main #Inicio {
   }
 }
 main #Inicio h1 {
-  font-family: Great Vibes;
+  font-family: "Great Vibes";
   letter-spacing: 5px;
   font-size: 4rem;
   color: white;
@@ -110,7 +126,7 @@ main #Inicio .myXV {
   align-items: center;
   margin-bottom: 5px;
   width: 100%;
-  font-family: Cinzel;
+  font-family: "Cinzel";
 }
 main #Inicio .line {
   width: 35vw;
@@ -124,67 +140,78 @@ main #Inicio .text {
   width: 100%;
   text-align: center;
 }
-main #musicSec {
-  gap: 20px;
-  padding: 30px 0;
+main #divs2 {
+  gap: 10px;
+  background: transparent;
+  margin: 5px 0;
+}
+main #divs2 .player-container,
+main #divs2 .message {
   background-image: url("../imgs/decoration/paper.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
+  padding: 20px;
+  width: 100%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-radius: 30px;
+  text-align: center;
+  overflow: hidden;
 }
-main #musicSec .playMusic {
-  border-top: 2px solid #000;
+main #divs2 .player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+}
+main #divs2 .player-container .playMusic {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-direction: column;
-  width: 90%;
   border: 2px solid rgb(215, 185, 145);
+  padding: 20px 70px;
+  text-align: center;
   position: relative;
-  z-index: 1;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-main #musicSec .playMusic figure img {
+main #divs2 .player-container .playMusic h2 {
+  z-index: 2;
+  font-family: "Great Vibes";
+  font-size: 2.5rem;
+}
+main #divs2 .player-container .playMusic figure img {
   position: absolute;
   width: 150px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 1;
+  z-index: 0;
 }
-main #musicSec .playMusic figure .img1 {
+main #divs2 .player-container .playMusic figure .img1 {
   transform: rotate(180deg);
   left: -25px;
   top: -30px;
 }
-main #musicSec .playMusic figure .img2 {
+main #divs2 .player-container .playMusic figure .img2 {
   right: -25px;
   bottom: -30px;
 }
-main #musicSec .playMusic .player-container {
+main #divs2 .player-container .playMusic .controls {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-direction: column;
-  padding: 20px;
-  text-align: center;
-  width: 320px;
-  color: #000;
-  z-index: 1;
-}
-main #musicSec .playMusic .controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
   margin-top: 15px;
-  width: 70%;
-  border: 2px solid rgb(161, 138, 79);
+  border: 2px solid rgb(215, 185, 145);
 }
-main #musicSec .playMusic .btn {
+main #divs2 .player-container .playMusic .btn {
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -196,16 +223,79 @@ main #musicSec .playMusic .btn {
   width: 4rem;
   height: 4rem;
 }
-main #musicSec .playMusic .btnStop {
+main #divs2 .player-container .playMusic .btnStop {
   scale: 1.2;
   transform: translateY(2px);
+}
+main #divs2 .message {
+  position: relative;
+}
+main #divs2 .message .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(215, 185, 145);
+  height: 27.5vh;
+  width: 100%;
+  position: relative;
+}
+main #divs2 .message .text-container figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+main #divs2 .message .text-container figure img {
+  position: absolute;
+  width: 70px;
+  z-index: 0;
+  height: 70px;
+}
+main #divs2 .message .text-container figure .img1 {
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+}
+main #divs2 .message .text-container figure .img2 {
+  top: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+main #divs2 .message .text-container figure .img3 {
+  bottom: 0;
+  left: 0;
+  transform: rotate(270deg);
+}
+main #divs2 .message .text-container figure .img4 {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+main #divs2 .message .text-container .p-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+main #divs2 .message .text-container .p-container .p1,
+main #divs2 .message .text-container .p-container .p2 {
+  font-family: "Raleway";
+  color: #333;
+  line-height: 1.5;
+  z-index: 2;
+}
+main #divs2 .message .text-container .p-container .p2 {
+  font-weight: bold;
+  margin-top: 10px;
 }
 main #Countdown {
   background-image: url("../imgs/xcaret/img3.jpg");
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 80vh;
   color: #fff;
 }
@@ -217,12 +307,12 @@ main #Countdown h3 {
 }
 main #Countdown h1 {
   font-size: 3.5rem;
-  font-family: Great Vibes;
+  font-family: "Great Vibes";
   margin-bottom: 80px;
 }
 main #Countdown h2 {
   font-size: 2.5rem;
-  font-family: Great Vibes;
+  font-family: "Great Vibes";
   margin-top: 40px;
 }
 main #Countdown h3 {
@@ -245,7 +335,7 @@ main #Countdown .countdown-container #minutes {
 main #Countdown .countdown-container .countdown-item {
   padding: 5px;
   text-align: center;
-  font-family: Cinzel;
+  font-family: "Cinzel";
 }
 main #Countdown .countdown-container .countdown-item .countdown-number {
   font-size: 2rem;
@@ -256,12 +346,13 @@ main #Countdown .countdown-container .countdown-item .countdown-text {
   opacity: 0.8;
 }
 main #Info {
-  background-image: url("../imgs/decoration/paper4.png");
+  background-image: url("../imgs/decoration/paper.jpg");
   background-repeat: repeat;
-  background-size: cover;
-  padding: 40px 25px;
+  padding: 20px 15px;
   position: relative;
   color: #000;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 main #Info figure img {
   position: absolute;
@@ -269,23 +360,17 @@ main #Info figure img {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 0;
+  z-index: 1;
 }
 main #Info figure .img1 {
   transform: rotate(180deg);
-  left: -20px;
-  top: -10px;
+  left: -10px;
+  top: -12.5px;
 }
 main #Info figure .img2 {
   transform: rotate(180deg) scaleX(-1);
-  right: -20px;
-  top: -10px;
-}
-main #Info h1 {
-  font-family: Great Vibes;
-  font-size: 3rem;
-  z-index: 2;
-  text-align: center;
+  right: -10px;
+  top: -12.5px;
 }
 main #Info .container {
   display: flex;
@@ -294,12 +379,20 @@ main #Info .container {
   flex-direction: column;
   border: 2px solid rgb(215, 185, 145);
   padding: 30px 20px;
+  z-index: 0;
   position: relative;
+}
+main #Info .container h1 {
+  font-family: "Great Vibes";
+  font-size: 3rem;
+  z-index: 3;
+  width: 70%;
+  text-align: center;
 }
 main #Info .container figure img {
   position: absolute;
-  width: 100px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   -o-object-fit: contain;
      object-fit: contain;
   z-index: 0;
@@ -307,12 +400,12 @@ main #Info .container figure img {
 main #Info .container figure .img3 {
   transform: rotate(270deg) scaleY(-1);
   right: 0;
-  bottom: -25px;
+  bottom: 0;
 }
 main #Info .container figure .img4 {
   transform: rotate(270deg);
   left: 0;
-  bottom: -25px;
+  bottom: 0;
 }
 main #Info .container .text {
   font-size: 1.2rem;
@@ -359,6 +452,7 @@ main #Info .container .salon {
   align-items: center;
   flex-direction: column;
   gap: 15px;
+  z-index: 1;
 }
 main #Info .container .iglesia .hour,
 main #Info .container .salon .hour {
@@ -379,13 +473,327 @@ main #Info .container .salon .btn {
   cursor: pointer;
   text-decoration: none;
 }
+main #DressCode {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  border-radius: 30px;
+  background-image: url("../imgs/decoration/paper4.png");
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 30px 20px;
+}
+main #DressCode .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(215, 185, 145);
+  width: 90%;
+  padding: 30px 20px;
+  position: relative;
+}
+main #DressCode .container figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+main #DressCode .container figure img {
+  position: absolute;
+  width: 70px;
+  z-index: 0;
+  height: 70px;
+}
+main #DressCode .container figure .img1 {
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+}
+main #DressCode .container figure .img2 {
+  top: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+main #DressCode .container figure .img3 {
+  bottom: 0;
+  left: 0;
+  transform: rotate(270deg);
+}
+main #DressCode .container figure .img4 {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+main #DressCode .container h1 {
+  width: 80%;
+  font-size: 3rem;
+  font-family: "Great Vibes";
+  color: rgb(215, 185, 145);
+  margin-bottom: 1rem;
+}
+main #DressCode .container p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  margin: 0.5rem 0;
+}
+main #DressCode .container .img-fancy {
+  width: 100px;
+  height: auto;
+  margin: 1rem 0;
+}
+main #DressCode .container ul {
+  list-style: circle;
+  padding: 0;
+}
+main #DressCode .container ul li {
+  font-size: 1.1rem;
+  color: #d9534f;
+  font-weight: bold;
+  background: rgba(217, 83, 79, 0.1);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 0.3rem 0;
+}
+main #RSVP {
+  height: 80vh;
+  background-image: url("../imgs/xcaret/img3.jpg");
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+}
+main #RSVP h1 {
+  position: absolute;
+  font-family: "Great Vibes";
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 40px;
+  width: 70%;
+  top: 0;
+}
+main #RSVP .container-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  width: 90%;
+  margin-top: 50px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 50px;
+  margin-bottom: 50px;
+}
+main #RSVP .container-text p {
+  font-size: 1.2rem;
+  font-family: "Raleway";
+}
+main #RSVP svg {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 50%;
+}
+main #RSVP .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+main #RSVP .btns a {
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border: 2px solid rgb(215, 185, 145);
+  text-align: center;
+  font-family: "Fredoka";
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+main #Gifts {
+  background-image: url("../imgs/decoration/paper4.png");
+  background-repeat: repeat;
+  padding: 20px 15px;
+  position: relative;
+  color: #000;
+  border-radius: 30px;
+}
+main #Gifts .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(215, 185, 145);
+  padding: 30px 20px;
+  z-index: 0;
+  width: 80%;
+  position: relative;
+}
+main #Gifts .container h1 {
+  font-family: "Great Vibes";
+  font-size: 3rem;
+  color: rgb(215, 185, 145);
+  z-index: 3;
+  width: 70%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+main #Gifts .container p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #000;
+  font-family: "Raleway";
+}
+main #Gifts .container .letter-img {
+  width: 80px;
+  height: auto;
+  margin: 1.2rem 0;
+}
+main #Gifts .container figure img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 0;
+}
+main #Gifts .container figure .img1 {
+  transform: rotate(0deg);
+  left: 0;
+  top: 0;
+}
+main #Gifts .container figure .img2 {
+  transform: rotate(90deg);
+  right: 0;
+  top: 0;
+}
+main #Gifts .container figure .img3 {
+  transform: rotate(270deg) scaleY(-1);
+  right: 0;
+  bottom: 0;
+}
+main #Gifts .container figure .img4 {
+  transform: rotate(270deg);
+  left: 0;
+  bottom: 0;
+}
+main #Gallery {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px 20px;
+  text-align: center;
+}
+main #Gallery h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: "Great Vibes";
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 50px;
+  animation: fade-in 1s ease-in-out;
+}
+main #Gallery p {
+  font-size: 1.2rem;
+  margin: 40px 0;
+  opacity: 0;
+  animation: fade-in 1.2s ease-in-out forwards;
+  color: #f0f0f0;
+  font-family: "Raleway";
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 50px;
+}
+main #Gallery .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main #Gallery .container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: zoom-in 1s ease-in-out forwards;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+main #Gallery .container img:hover {
+  transform: scale(1);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.6);
+}
+main #Gallery .container .imgs2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+main #Gallery .container .imgs2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.3);
+}
+main #Gallery .container .imgs2 img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+main .animate-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+main .animate-element.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/*
 #Inicio,
-#musicSec,
+#divs2,
 #Countdown,
+#Info,
+#DressCode,
 #RSVP,
-#Gallery,
-#Gifts,
-#DressCode {
+//! #Gifts,
+#Gallery {
   display: none;
-}/*# sourceMappingURL=styles.css.map */
+}
+ *//*# sourceMappingURL=styles.css.map */

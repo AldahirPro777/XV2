@@ -1,22 +1,21 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mis XV!!!</title>
+    <title>Xcaret • XV</title>
     <link rel="stylesheet" href="./scss/styles.css" />
   </head>
   <body>
-    <div class="width-error">
-      <div class="error-text">
-        <h1>Ups!!!</h1>
-        <p>Pagina web solo disponible es dispositivos moviles</p>
-      </div>
-    </div>
-
     <main>
+      <div class="width-error">
+        <div class="error-text">
+          <h1>Ups</h1>
+          <p>Pagina web solo disponible es dispositivos moviles</p>
+        </div>
+      </div>
+
       <section id="Inicio">
-        <!-- <h1>Xcaret</h1> -->
 
         <div class="container">
           <div class="myXV">
@@ -27,14 +26,13 @@
         </div>
       </section>
 
-      <section id="musicSec">
-        <div class="playMusic">
-          <figure>
-            <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img1" />
-            <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img2" />
-          </figure>
-
-          <div class="player-container">
+      <section id="divs2">
+        <div class="player-container">
+          <div class="playMusic">
+            <figure>
+              <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img1" />
+              <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img2" />
+            </figure>
             <h2>Dale play a mi canción favorita</h2>
             <audio id="audio" loop>
               <source
@@ -45,7 +43,6 @@
             </audio>
 
             <div class="controls">
-              <!-- Botón Stop -->
               <button id="stop" class="btn btnStop">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +57,6 @@
                 </svg>
               </button>
 
-              <!-- Botón Play/Pause -->
               <button id="playPause" class="btn">
                 <svg
                   id="playIcon"
@@ -91,7 +87,6 @@
                 </svg>
               </button>
 
-              <!-- Botón Stop -->
               <button class="btn btnStop btnExtra">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +100,42 @@
                   />
                 </svg>
               </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="text-container">
+            <figure>
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img1"
+              />
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img2"
+              />
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img3"
+              />
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img4"
+              />
+            </figure>
+
+            <div class="p-container">
+              <p class="p1">
+                Hay eventos en la vida que son muy especiales por si solos, pero
+                poder compartirlos con quienes más Quiero, los convierte en
+                momentos únicos e inolvidables.
+              </p>
+              <p class="p2">Te esperamos en mi fiesta</p>
             </div>
           </div>
         </div>
@@ -190,46 +221,20 @@
             <div class="divHour">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1.2em"
-                height="1.2em"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
               >
-                <path
-                  fill="currentColor"
-                  d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"
-                />
-                <rect
-                  width="2"
-                  height="7"
-                  x="11"
-                  y="6"
-                  fill="currentColor"
-                  rx="1"
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 >
-                  <animateTransform
-                    attributeName="transform"
-                    dur="36s"
-                    repeatCount="indefinite"
-                    type="rotate"
-                    values="0 12 12;360 12 12"
-                  />
-                </rect>
-                <rect
-                  width="2"
-                  height="9"
-                  x="11"
-                  y="11"
-                  fill="currentColor"
-                  rx="1"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    dur="3s"
-                    repeatCount="indefinite"
-                    type="rotate"
-                    values="0 12 12;360 12 12"
-                  />
-                </rect>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l-2.5 4" />
+                </g>
               </svg>
               <p class="hour">7:00 PM</p>
             </div>
@@ -237,50 +242,22 @@
             <div class="divUbi">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1.2em"
-                height="1.2em"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
               >
-                <circle
-                  cx="12"
-                  cy="9"
-                  r="2.5"
-                  fill="currentColor"
-                  fill-opacity="0"
-                >
-                  <animate
-                    fill="freeze"
-                    attributeName="fill-opacity"
-                    begin="0.7s"
-                    dur="0.15s"
-                    values="0;1"
-                  />
-                </circle>
-                <path
+                <rect width="24" height="24" fill="none" />
+                <g
                   fill="none"
                   stroke="currentColor"
-                  stroke-dasharray="48"
-                  stroke-dashoffset="48"
-                  stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M12 20.5c0 0 -6 -7 -6 -11.5c0 -3.31 2.69 -6 6 -6c3.31 0 6 2.69 6 6c0 4.5 -6 11.5 -6 11.5Z"
                 >
-                  <animate
-                    fill="freeze"
-                    attributeName="stroke-dashoffset"
-                    dur="0.6s"
-                    values="48;0"
+                  <path d="M13 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Z" />
+                  <path
+                    d="M17.5 9.5c0 3.038-2 6.5-5.5 10.5c-3.5-4-5.5-7.462-5.5-10.5a5.5 5.5 0 1 1 11 0Z"
                   />
-                  <animateTransform
-                    attributeName="transform"
-                    dur="3s"
-                    keyTimes="0;0.3;0.4;0.54;0.6;0.68;0.7;1"
-                    repeatCount="indefinite"
-                    type="rotate"
-                    values="0 12 20.5;0 12 20.5;-8 12 20.5;0 12 20.5;5 12 20.5;-2 12 20.5;0 12 20.5;0 12 20.5"
-                  />
-                </path>
+                </g>
               </svg>
               <p class="ubi">CATERAL CRISTO REY</p>
               <a
@@ -298,46 +275,21 @@
             <div class="divHour">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1.2em"
-                height="1.2em"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
               >
-                <path
-                  fill="currentColor"
-                  d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"
-                />
-                <rect
-                  width="2"
-                  height="7"
-                  x="11"
-                  y="6"
-                  fill="currentColor"
-                  rx="1"
+                <rect width="24" height="24" fill="none" />
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 >
-                  <animateTransform
-                    attributeName="transform"
-                    dur="36s"
-                    repeatCount="indefinite"
-                    type="rotate"
-                    values="0 12 12;360 12 12"
-                  />
-                </rect>
-                <rect
-                  width="2"
-                  height="9"
-                  x="11"
-                  y="11"
-                  fill="currentColor"
-                  rx="1"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    dur="3s"
-                    repeatCount="indefinite"
-                    type="rotate"
-                    values="0 12 12;360 12 12"
-                  />
-                </rect>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l-4 2" />
+                </g>
               </svg>
               <p class="hour">8:30 PM</p>
             </div>
@@ -345,50 +297,22 @@
             <div class="divUbi">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1.2em"
-                height="1.2em"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
               >
-                <circle
-                  cx="12"
-                  cy="9"
-                  r="2.5"
-                  fill="currentColor"
-                  fill-opacity="0"
-                >
-                  <animate
-                    fill="freeze"
-                    attributeName="fill-opacity"
-                    begin="0.7s"
-                    dur="0.15s"
-                    values="0;1"
-                  />
-                </circle>
-                <path
+                <rect width="24" height="24" fill="none" />
+                <g
                   fill="none"
                   stroke="currentColor"
-                  stroke-dasharray="48"
-                  stroke-dashoffset="48"
-                  stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M12 20.5c0 0 -6 -7 -6 -11.5c0 -3.31 2.69 -6 6 -6c3.31 0 6 2.69 6 6c0 4.5 -6 11.5 -6 11.5Z"
                 >
-                  <animate
-                    fill="freeze"
-                    attributeName="stroke-dashoffset"
-                    dur="0.6s"
-                    values="48;0"
+                  <path d="M13 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Z" />
+                  <path
+                    d="M17.5 9.5c0 3.038-2 6.5-5.5 10.5c-3.5-4-5.5-7.462-5.5-10.5a5.5 5.5 0 1 1 11 0Z"
                   />
-                  <animateTransform
-                    attributeName="transform"
-                    dur="3s"
-                    keyTimes="0;0.3;0.4;0.54;0.6;0.68;0.7;1"
-                    repeatCount="indefinite"
-                    type="rotate"
-                    values="0 12 20.5;0 12 20.5;-8 12 20.5;0 12 20.5;5 12 20.5;-2 12 20.5;0 12 20.5;0 12 20.5"
-                  />
-                </path>
+                </g>
               </svg>
               <p class="ubi">SALÓN DE EVENTOS LAS CyCAS</p>
               <a
@@ -403,51 +327,132 @@
       </section>
 
       <section id="DressCode">
-        <h1>Código de vestimenta</h1>
-        <p>De Gala</p>
-        <img src="" alt="" />
-        <p>Colores restringidos</p>
-        <ul>
-          <li>Rosa</li>
-          <li>Azul</li>
-          <li>Dorado</li>
-        </ul>
+        <div class="container">
+          <figure>
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img1"
+            />
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img2"
+            />
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img3"
+            />
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img4"
+            />
+          </figure>
+
+          <h1>Código de vestimenta</h1>
+          <p>De Gala</p>
+          <img
+            src="./imgs/decoration/ropa2.png"
+            alt="Imagen"
+            class="img-fancy"
+          />
+          <p>Colores restringidos</p>
+          <ul>
+            <li>Rosa</li>
+            <li>Azul</li>
+            <li>Dorado</li>
+          </ul>
+        </div>
       </section>
 
       <section id="RSVP">
         <h1>Confirma tu asistencia</h1>
 
-        <p>!Quiero compartir este momento tan esperado contigo!</p>
-        <p>Por favor ayudanos confirmando tu asistencia</p>
+        <div class="container-text">
+          <p class="p1">Quiero compartir este momento tan esperado contigo</p>
+          <p class="p2">Por favor ayudanos confirmando tu asistencia</p>
+        </div>
 
-        <img src="" alt="" />
-
-        <a href="">Confirmar a Xcaret</a>
-        <a href="">Confirmar a Mamá</a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
+          />
+        </svg>
+        <div class="btns">
+          <a
+            href="#"
+            target="_blank"
+            onclick="confirmarAsistencia('Xcaret', '527531373712')"
+            >Confirmar a Xcaret</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            onclick="confirmarAsistencia('Mamá', '527531059498')"
+            >Confirmar a Mamá</a
+          >
+        </div>
       </section>
 
       <section id="Gifts">
         <div class="container">
+          <figure>
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img1"
+            />
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img2"
+            />
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img3"
+            />
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="Imagen"
+              class="img4"
+            />
+          </figure>
+
           <h1>Regalos</h1>
-          <p>!Gracias por formar parte de este dia¡</p>
+          <p>Gracias por formar parte de este dia</p>
 
-          <img src="" alt="" />
+          <img
+            src="https://img.icons8.com/ios/50/mail.png"
+            alt="mail"
+            class="letter-img"
+          />
 
-          <p>"La lluvia de sobres"</p>
+          <p class="tematica">"La lluvia de sobres"</p>
         </div>
       </section>
 
       <section id="Gallery">
         <h1>Galería</h1>
-        <p>!Mi sesión de fotos¡</p>
+        <p>Mi sesión de fotos</p>
         <div class="container">
-          <img src="" alt="" />
-          <div class="2imgs">
-            <img src="" alt="" />
-            <img src="" alt="" />
+          <img src="./imgs/xcaret/img1.jpg" alt="Imagen" />
+          <div class="imgs2">
+            <img src="./imgs/xcaret/img2.jpg" alt="Imagen" />
+            <img src="./imgs/xcaret/img4.jpg" alt="Imagen" />
+            <img src="./imgs/xcaret/img3.jpg" alt="Imagen" />
+            <img src="./imgs/xcaret/img5.jpg" alt="Imagen" />
           </div>
         </div>
-        <p>!Los mejores momentos de la vida merecen ser compartidos¡</p>
+        <p>Los mejores momentos de la vida merecen ser compartidos</p>
 
         <p>Gracias por acompañarme.</p>
       </section>

@@ -1,7 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Great+Vibes&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;900&family=Allura&family=Tangerine:wght@400;700&family=Montserrat:wght@300;400&family=Raleway:wght@300;400&family=Poppins:wght@300;400&family=Quattrocento:wght@400;700&family=Fredoka:wght@300;400;700&family=Cinzel:wght@400;700&family=Monsieur+La+Doulaise&display=swap");
 
-//* Definicion de variables y bloque de estilos generales
+// Variables de colores y medidas
+$principalColor: rgb(215, 185, 145);
+$borderPx: 30px;
+
+// Variables tipográficas
+$font-heading: "Great Vibes";
+$font-body: "Raleway";
+$font-button: "Fredoka";
+$font-subtitle: "Cinzel";
+
+// Mixins para estilos reutilizables
 @mixin display-flex {
   display: flex;
   justify-content: center;
@@ -9,7 +19,11 @@
   flex-direction: column;
 }
 
-$principalColor: rgb(215, 185, 145);
+@mixin background-config {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 * {
   margin: 0;
@@ -18,8 +32,8 @@ $principalColor: rgb(215, 185, 145);
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 }
 
 html {
@@ -30,26 +44,22 @@ html {
   }
 
   .width-error {
+    @include display-flex;
     display: none;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-
-    background: linear-gradient(125deg, #333, #000);
 
     .error-text {
-      background: white;
+      background-color: #fff;
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       max-width: 400px;
-      width: 90%;
       animation: fadeIn 0.5s ease-in-out;
 
       h1 {
         text-align: center;
         font-size: 2.5rem;
-        color: #ff4757;
+        color: darkred;
         margin-bottom: 10px;
       }
 
@@ -57,6 +67,7 @@ html {
         text-align: center;
         font-size: 1.2rem;
         color: #333;
+        font-weight: 600;
       }
     }
 
@@ -72,8 +83,15 @@ html {
     }
   }
 
-  @media (min-width: 700px) {
-    main {
+  @media (min-width: 650px) {
+    #Inicio,
+    #divs2,
+    #Countdown,
+    #Info,
+    #DressCode,
+    #RSVP,
+    #Gallery,
+    #Gifts {
       display: none;
     }
     .width-error {
@@ -83,18 +101,20 @@ html {
 
   section {
     @include display-flex;
+    @include background-config;
     overflow: hidden;
+    width: 100%;
   }
 }
 
 main {
+  background-image: url("../imgs/decoration/fondo2divs.jpg");
+  @include background-config;
+  background-attachment: fixed;
+
   #Inicio {
     background-image: url("../imgs/xcaret/img2.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     height: 60vh;
-
     position: relative;
     justify-content: space-between;
     padding: 20px;
@@ -106,7 +126,7 @@ main {
     }
 
     h1 {
-      font-family: Great Vibes;
+      font-family: $font-heading; // Título principal
       letter-spacing: 5px;
       font-size: 4rem;
       color: white;
@@ -132,7 +152,7 @@ main {
       align-items: center;
       margin-bottom: 5px;
       width: 100%;
-      font-family: Cinzel;
+      font-family: $font-subtitle; // Subtítulo o fuente secundaria
     }
 
     .line {
@@ -150,82 +170,162 @@ main {
     }
   }
 
-  #musicSec {
-    gap: 20px;
-    padding: 30px 0;
-    background-image: url("../imgs/decoration/paper.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  #divs2 {
+    gap: 10px;
+    background: transparent;
+    margin: 5px 0;
 
-    .playMusic {
-      border-top: 2px solid #000;
+    .player-container,
+    .message {
+      background-image: url("../imgs/decoration/paper.png");
+      background-repeat: repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      width: 100%;
+      max-width: max-content;
+      border-radius: $borderPx;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .player-container {
       @include display-flex;
-      flex-direction: column;
-      width: 90%;
-      border: 2px solid $principalColor;
-      position: relative;
-      z-index: 1;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
+      color: #000;
 
-      figure {
-        img {
-          position: absolute;
-          width: 150px;
-          height: 200px;
-          object-fit: cover;
-          z-index: 1;
-        }
-
-        .img1 {
-          transform: rotate(180deg);
-          left: -25px;
-          top: -30px;
-        }
-
-        .img2 {
-          right: -25px;
-          bottom: -30px;
-        }
-      }
-
-      .player-container {
+      .playMusic {
         @include display-flex;
         flex-direction: column;
-        padding: 20px;
+        border: 2px solid $principalColor;
+        padding: 20px 70px;
         text-align: center;
-        width: 320px;
-        color: #000;
-        z-index: 1;
-      }
+        position: relative;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
 
-      .controls {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-items: center;
-        margin-top: 15px;
-        width: 70%;
-        border: 2px solid rgb(161, 138, 79);
-      }
+        h2 {
+          z-index: 2;
+          font-family: $font-heading;
+          font-size: 2.5rem;
+        }
 
-      .btn {
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        background: none;
-        font-size: 1.2rem;
-        background-color: transparent;
-        transition: all 300ms ease;
-        color: #062a35;
-        width: 4rem;
-        height: 4rem;
-      }
+        figure {
+          img {
+            position: absolute;
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            z-index: 0;
+          }
 
-      .btnStop {
-        scale: 1.2;
-        transform: translateY(2px);
+          .img1 {
+            transform: rotate(180deg);
+            left: -25px;
+            top: -30px;
+          }
+
+          .img2 {
+            right: -25px;
+            bottom: -30px;
+          }
+        }
+
+        .controls {
+          @include display-flex;
+          justify-content: space-evenly;
+          flex-direction: row;
+          margin-top: 15px;
+          border: 2px solid $principalColor;
+        }
+
+        .btn {
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          background: none;
+          font-size: 1.2rem;
+          background-color: transparent;
+          transition: all 300ms ease;
+          color: #062a35;
+          width: 4rem;
+          height: 4rem;
+        }
+
+        .btnStop {
+          scale: 1.2;
+          transform: translateY(2px);
+        }
+      }
+    }
+
+    .message {
+      position: relative;
+
+      .text-container {
+        @include display-flex;
+        border: 2px solid $principalColor;
+        height: 27.5vh;
+        width: 100%;
+        position: relative;
+
+        figure {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          margin: 0;
+          padding: 0;
+
+          img {
+            position: absolute;
+            width: 70px;
+            z-index: 0;
+            height: 70px;
+          }
+
+          .img1 {
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
+          }
+
+          .img2 {
+            top: 0;
+            right: 0;
+            transform: rotate(90deg);
+          }
+
+          .img3 {
+            bottom: 0;
+            left: 0;
+            transform: rotate(270deg);
+          }
+
+          .img4 {
+            bottom: 0;
+            right: 0;
+            transform: rotate(180deg);
+          }
+        }
+
+        .p-container {
+          @include display-flex;
+          width: 80%;
+
+          .p1,
+          .p2 {
+            font-family: $font-body; // Texto del cuerpo
+            color: #333;
+            line-height: 1.5;
+            z-index: 2;
+          }
+
+          .p2 {
+            font-weight: bold;
+            margin-top: 10px;
+          }
+        }
       }
     }
   }
@@ -233,10 +333,6 @@ main {
   #Countdown {
     background-image: url("../imgs/xcaret/img3.jpg");
     background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
     height: 80vh;
     color: #fff;
 
@@ -249,13 +345,13 @@ main {
 
     h1 {
       font-size: 3.5rem;
-      font-family: Great Vibes;
+      font-family: $font-heading;
       margin-bottom: 80px;
     }
 
     h2 {
       font-size: 2.5rem;
-      font-family: Great Vibes;
+      font-family: $font-heading;
       margin-top: 40px;
     }
 
@@ -281,7 +377,7 @@ main {
       .countdown-item {
         padding: 5px;
         text-align: center;
-        font-family: Cinzel;
+        font-family: $font-subtitle;
 
         .countdown-number {
           font-size: 2rem;
@@ -297,13 +393,13 @@ main {
   }
 
   #Info {
-    background-image: url("../imgs/decoration/paper4.png");
+    background-image: url("../imgs/decoration/paper.jpg");
     background-repeat: repeat;
-    background-size: cover;
-    padding: 40px 25px;
+    padding: 20px 15px;
     position: relative;
     color: #000;
-    
+    border-bottom-right-radius: $borderPx;
+    border-bottom-left-radius: $borderPx;
 
     figure {
       img {
@@ -311,41 +407,42 @@ main {
         width: 150px;
         height: 200px;
         object-fit: cover;
-        z-index: 0;
+        z-index: 1;
       }
 
       .img1 {
         transform: rotate(180deg);
-        left: -20px;
-        top: -10px;
+        left: -10px;
+        top: -12.5px;
       }
 
       .img2 {
         transform: rotate(180deg) scaleX(-1);
-
-        right: -20px;
-        top: -10px;
+        right: -10px;
+        top: -12.5px;
       }
-    }
-
-    h1 {
-      font-family: Great Vibes;
-      font-size: 3rem;
-      z-index: 2;
-      text-align: center;
     }
 
     .container {
       @include display-flex;
       border: 2px solid $principalColor;
       padding: 30px 20px;
+      z-index: 0;
       position: relative;
+
+      h1 {
+        font-family: $font-heading;
+        font-size: 3rem;
+        z-index: 3;
+        width: 70%;
+        text-align: center;
+      }
 
       figure {
         img {
           position: absolute;
-          width: 100px;
-          height: 150px;
+          width: 80px;
+          height: 80px;
           object-fit: contain;
           z-index: 0;
         }
@@ -353,13 +450,13 @@ main {
         .img3 {
           transform: rotate(270deg) scaleY(-1);
           right: 0;
-          bottom: -25px;
+          bottom: 0;
         }
 
         .img4 {
           transform: rotate(270deg);
           left: 0;
-          bottom: -25px;
+          bottom: 0;
         }
       }
 
@@ -369,11 +466,11 @@ main {
         color: #000;
         width: 100%;
         margin: 25px 0;
-        font-family: "Fredoka";
+        font-family: $font-button;
       }
 
       h2 {
-        font-family: "Great Vibes";
+        font-family: $font-heading;
         font-size: 2.7rem;
         text-align: center;
         margin: 40px 0 20px;
@@ -407,6 +504,7 @@ main {
       .salon {
         @include display-flex;
         gap: 15px;
+        z-index: 1;
 
         .hour {
           font-size: 1.2rem;
@@ -429,15 +527,354 @@ main {
       }
     }
   }
+
+  #DressCode {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: $borderPx;
+    background-image: url("../imgs/decoration/paper4.png");
+    background-repeat: repeat;
+    @include background-config;
+    padding: 30px 20px;
+
+    .container {
+      @include display-flex;
+      border: 2px solid $principalColor;
+      width: 90%;
+      padding: 30px 20px;
+      position: relative;
+
+      figure {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        img {
+          position: absolute;
+          width: 70px;
+          z-index: 0;
+          height: 70px;
+        }
+
+        .img1 {
+          top: 0;
+          left: 0;
+          transform: rotate(0deg);
+        }
+
+        .img2 {
+          top: 0;
+          right: 0;
+          transform: rotate(90deg);
+        }
+
+        .img3 {
+          bottom: 0;
+          left: 0;
+          transform: rotate(270deg);
+        }
+
+        .img4 {
+          bottom: 0;
+          right: 0;
+          transform: rotate(180deg);
+        }
+      }
+
+      h1 {
+        width: 80%;
+        font-size: 3rem;
+        font-family: $font-heading;
+        color: $principalColor;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #555;
+        margin: 0.5rem 0;
+      }
+
+      .img-fancy {
+        width: 100px;
+        height: auto;
+        margin: 1rem 0;
+      }
+
+      ul {
+        list-style: circle;
+        padding: 0;
+      }
+
+      ul li {
+        font-size: 1.1rem;
+        color: #d9534f;
+        font-weight: bold;
+        background: rgba(217, 83, 79, 0.1);
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin: 0.3rem 0;
+      }
+    }
+  }
+
+  #RSVP {
+    height: 80vh;
+    background-image: url("../imgs/xcaret/img3.jpg");
+    background-attachment: fixed;
+    color: #fff;
+    position: relative;
+
+    h1 {
+      position: absolute;
+      font-family: $font-heading;
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 40px;
+      width: 70%;
+      top: 0;
+    }
+
+    .container-text {
+      @include display-flex;
+      text-align: center;
+      gap: 20px;
+      width: 90%;
+      margin-top: 50px;
+      backdrop-filter: blur(1px);
+      border-radius: 50px;
+      margin-bottom: 50px;
+
+      p {
+        font-size: 1.2rem;
+        font-family: $font-body;
+      }
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      backdrop-filter: blur(2px);
+      border-radius: 50%;
+    }
+
+    .btns {
+      @include display-flex;
+      gap: 30px;
+      margin-top: 40px;
+
+      a {
+        background-color: transparent;
+        backdrop-filter: blur(1px);
+        border: 2px solid $principalColor;
+        text-align: center;
+        font-family: $font-button;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #Gifts {
+    background-image: url("../imgs/decoration/paper4.png");
+    background-repeat: repeat;
+    padding: 20px 15px;
+    position: relative;
+    color: #000;
+    border-radius: $borderPx;
+
+    .container {
+      @include display-flex;
+      border: 2px solid $principalColor;
+      padding: 30px 20px;
+      z-index: 0;
+      width: 80%;
+      position: relative;
+
+      h1 {
+        font-family: $font-heading;
+        font-size: 3rem;
+        color: $principalColor;
+        z-index: 3;
+        width: 70%;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.2rem;
+        text-align: center;
+        color: #000;
+        font-family: $font-body;
+      }
+
+      .letter-img {
+        width: 80px;
+        height: auto;
+        margin: 1.2rem 0;
+      }
+
+      figure {
+        img {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+          z-index: 0;
+        }
+
+        .img1 {
+          transform: rotate(0deg);
+          left: 0;
+          top: 0;
+        }
+
+        .img2 {
+          transform: rotate(90deg);
+          right: 0;
+          top: 0;
+        }
+
+        .img3 {
+          transform: rotate(270deg) scaleY(-1);
+          right: 0;
+          bottom: 0;
+        }
+
+        .img4 {
+          transform: rotate(270deg);
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  #Gallery {
+    // Fondo semitransparente para resaltar las imágenes
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px 20px;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #fff;
+      font-family: $font-heading; // Fuente para títulos
+      backdrop-filter: blur(2px);
+      border-radius: 50px;
+      animation: fade-in 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 40px 0;
+      opacity: 0;
+      animation: fade-in 1.2s ease-in-out forwards;
+      color: #f0f0f0;
+      font-family: $font-body; // Fuente para párrafos
+      backdrop-filter: blur(2px);
+      border-radius: 50px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+        transform: scale(0.8);
+        opacity: 0;
+        animation: zoom-in 1s ease-in-out forwards;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1);
+          box-shadow: 0 10px 25px rgba(255, 204, 0, 0.6);
+        }
+      }
+
+      .imgs2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+          box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.3);
+
+          &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+          }
+        }
+      }
+    }
+
+    // Animaciones para la entrada de elementos
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoom-in {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .animate-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-element.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/*
 #Inicio,
-  #musicSec,
-  #Countdown,
-  #RSVP,
-  //! #Info,
-  #Gallery,
-  #Gifts,
-  #DressCode {
+#divs2,
+#Countdown,
+#Info,
+#DressCode,
+#RSVP,
+//! #Gifts,
+#Gallery {
   display: none;
 }
+ */

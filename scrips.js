@@ -63,3 +63,29 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+//? RSVP
+function confirmarAsistencia(nombre, numero) {
+  const mensaje = encodeURIComponent(
+    `Hola, confirmo mi asistencia a ${nombre}. ¡Nos vemos pronto!`
+  );
+  const url = `https://wa.me/${numero}?text=${mensaje}`;
+  window.location.href = url;
+}
+
+//? Animacion scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".animate-element");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+});
