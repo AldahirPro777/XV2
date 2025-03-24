@@ -83,7 +83,7 @@ html section {
 }
 
 main {
-  background-image: url("../imgs/decoration/fondo2divs.jpg");
+  background-image: url("../imgs/decoration/fondo4.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -147,7 +147,7 @@ main #divs2 {
 }
 main #divs2 .player-container,
 main #divs2 .message {
-  background-image: url("../imgs/decoration/paper.png");
+  background-image: url("../imgs/decoration/paper-min.png");
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
@@ -209,7 +209,7 @@ main #divs2 .player-container .playMusic .controls {
   justify-content: space-evenly;
   flex-direction: row;
   margin-top: 15px;
-  border: 2px solid rgb(215, 185, 145);
+  border: 2px solid #000;
 }
 main #divs2 .player-container .playMusic .btn {
   border: none;
@@ -297,7 +297,7 @@ main #Countdown {
   background-image: url("../imgs/xcaret/img3.jpg");
   background-attachment: fixed;
   height: 80vh;
-  color: #fff;
+  color: #000;
 }
 main #Countdown h1,
 main #Countdown h2,
@@ -346,13 +346,28 @@ main #Countdown .countdown-container .countdown-item .countdown-text {
   opacity: 0.8;
 }
 main #Info {
-  background-image: url("../imgs/decoration/paper.jpg");
+  background-image: url("../imgs/decoration/paper4.png");
   background-repeat: repeat;
   padding: 20px 15px;
   position: relative;
-  color: #000;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+main #Info .img-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 0;
+}
+main #Info .imgb1 {
+  top: 0;
+  left: 0;
+}
+main #Info .imgb2 {
+  bottom: 0;
+  right: 0;
 }
 main #Info figure img {
   position: absolute;
@@ -372,13 +387,30 @@ main #Info figure .img2 {
   right: -10px;
   top: -12.5px;
 }
+main #Info figure .img3 {
+  transform: rotate(270deg) scaleY(-1);
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #Info figure .img4 {
+  transform: rotate(270deg);
+  left: 0;
+  width: 120px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  bottom: 0;
+}
 main #Info .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid rgb(215, 185, 145);
-  padding: 30px 20px;
+  padding: 40px 20px;
   z-index: 0;
   position: relative;
 }
@@ -467,7 +499,7 @@ main #Info .container .salon .ubi {
 main #Info .container .iglesia .btn,
 main #Info .container .salon .btn {
   background-color: transparent;
-  border: 2px solid rgb(215, 185, 145);
+  border: 2px solid #000;
   color: #000;
   padding: 10px 20px;
   cursor: pointer;
@@ -532,7 +564,7 @@ main #DressCode .container h1 {
   width: 80%;
   font-size: 3rem;
   font-family: "Great Vibes";
-  color: rgb(215, 185, 145);
+  color: #000;
   margin-bottom: 1rem;
 }
 main #DressCode .container p {
@@ -547,6 +579,11 @@ main #DressCode .container .img-fancy {
   margin: 1rem 0;
 }
 main #DressCode .container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
   list-style: circle;
   padding: 0;
 }
@@ -561,9 +598,9 @@ main #DressCode .container ul li {
 }
 main #RSVP {
   height: 80vh;
-  background-image: url("../imgs/xcaret/img3.jpg");
+  background-image: url("../imgs/xcaret/img1.jpg");
   background-attachment: fixed;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 main #RSVP h1 {
@@ -571,7 +608,7 @@ main #RSVP h1 {
   font-family: "Great Vibes";
   font-size: 3rem;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
   width: 70%;
   top: 0;
 }
@@ -583,7 +620,7 @@ main #RSVP .container-text {
   text-align: center;
   gap: 20px;
   width: 90%;
-  margin-top: 50px;
+  margin-top: 60px;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
   border-radius: 50px;
@@ -617,7 +654,7 @@ main #RSVP .btns a {
   border: 2px solid rgb(215, 185, 145);
   text-align: center;
   font-family: "Fredoka";
-  color: #fff;
+  color: #000;
   padding: 10px 20px;
   cursor: pointer;
   text-decoration: none;
@@ -639,13 +676,13 @@ main #Gifts .container {
   border: 2px solid rgb(215, 185, 145);
   padding: 30px 20px;
   z-index: 0;
-  width: 80%;
+  width: 100%;
   position: relative;
 }
 main #Gifts .container h1 {
   font-family: "Great Vibes";
   font-size: 3rem;
-  color: rgb(215, 185, 145);
+  color: #000;
   z-index: 3;
   width: 70%;
   margin-bottom: 30px;
@@ -703,13 +740,10 @@ main #Gallery h1 {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   border-radius: 50px;
-  animation: fade-in 1s ease-in-out;
 }
 main #Gallery p {
   font-size: 1.2rem;
   margin: 40px 0;
-  opacity: 0;
-  animation: fade-in 1.2s ease-in-out forwards;
   color: #f0f0f0;
   font-family: "Raleway";
   -webkit-backdrop-filter: blur(2px);
@@ -728,14 +762,6 @@ main #Gallery .container img {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
-  transform: scale(0.8);
-  opacity: 0;
-  animation: zoom-in 1s ease-in-out forwards;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-main #Gallery .container img:hover {
-  transform: scale(1);
-  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.6);
 }
 main #Gallery .container .imgs2 {
   display: grid;
@@ -748,36 +774,12 @@ main #Gallery .container .imgs2 img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  transition: transform 800ms ease-in-out, box-shadow 0.4s ease-in-out;
   box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.3);
-}
-main #Gallery .container .imgs2 img:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
-}
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes zoom-in {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 main .animate-element {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 main .animate-element.show {

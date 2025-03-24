@@ -1,111 +1,340 @@
 <DOCTYPE html>
-<html lang="es-MX">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xcaret • XV</title>
-    <link rel="stylesheet" href="./scss/styles.css" />
-  </head>
-  <body>
-    <main>
-      <div class="width-error">
-        <div class="error-text">
-          <h1>Ups</h1>
-          <p>Pagina web solo disponible es dispositivos moviles</p>
-        </div>
-      </div>
-
-      <section id="Inicio">
-
-        <div class="container">
-          <div class="myXV">
-            <div class="line"></div>
-            <div class="text">MIS XV AÑOS</div>
-            <div class="line"></div>
+  <html lang="es-MX">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Xcaret • XV</title>
+      <link rel="stylesheet" href="./scss/styles.css" />
+    </head>
+    <body>
+      <main>
+        <div class="width-error">
+          <div class="error-text">
+            <h1>Ups</h1>
+            <p>Pagina web solo disponible es dispositivos moviles</p>
           </div>
         </div>
-      </section>
 
-      <section id="divs2">
-        <div class="player-container">
-          <div class="playMusic">
-            <figure>
-              <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img1" />
-              <img src="./imgs/flowers/flower3.png" alt="Imagen" class="img2" />
-            </figure>
-            <h2>Dale play a mi canción favorita</h2>
-            <audio id="audio" loop>
-              <source
-                src="./music/Alphaville - Forever Young.mp3"
-                type="audio/mpeg"
-              />
-              Tu navegador no soporta el elemento de audio.
-            </audio>
-
-            <div class="controls">
-              <button id="stop" class="btn btnStop">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2em"
-                  height="2em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m4.836 12l6.207 6.207l1.414-1.414L7.664 12l4.793-4.793l-1.414-1.414zm5.65 0l6.207 6.207l1.414-1.414L13.314 12l4.793-4.793l-1.414-1.414z"
-                  />
-                </svg>
-              </button>
-
-              <button id="playPause" class="btn">
-                <svg
-                  id="playIcon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2em"
-                  height="2em"
-                  viewBox="0 0 28 28"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M10.138 3.382C8.304 2.31 6 3.632 6 5.756v16.489c0 2.123 2.304 3.445 4.138 2.374l14.697-8.59c1.552-.907 1.552-3.15 0-4.057z"
-                  />
-                </svg>
-
-                <svg
-                  id="pauseIcon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2em"
-                  height="2em"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M6.75 3a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2m6.5 0a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </button>
-
-              <button class="btn btnStop btnExtra">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2em"
-                  height="2em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m19.164 12l-6.207-6.207l-1.414 1.414L16.336 12l-4.793 4.793l1.414 1.414zm-5.65 0L7.307 5.793L5.893 7.207L10.686 12l-4.793 4.793l1.414 1.414z"
-                  />
-                </svg>
-              </button>
+        <section id="Inicio">
+          <div class="container">
+            <div class="myXV">
+              <div class="line"></div>
+              <div class="text">MIS XV AÑOS</div>
+              <div class="line"></div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="message">
-          <div class="text-container">
+        <section id="divs2">
+          <div class="player-container">
+            <div class="playMusic">
+              <figure>
+                <img
+                  src="./imgs/flowers/flower3.png"
+                  alt="Imagen"
+                  class="img1"
+                />
+                <img
+                  src="./imgs/flowers/flower3.png"
+                  alt="Imagen"
+                  class="img2"
+                />
+              </figure>
+              <h2>Dale play a mi canción favorita</h2>
+              <audio id="audio" loop>
+                <source
+                  src="./music/Alphaville - Forever Young.mp3"
+                  type="audio/mpeg"
+                />
+                Tu navegador no soporta el elemento de audio.
+              </audio>
+
+              <div class="controls">
+                <button id="stop" class="btn btnStop">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2em"
+                    height="2em"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m4.836 12l6.207 6.207l1.414-1.414L7.664 12l4.793-4.793l-1.414-1.414zm5.65 0l6.207 6.207l1.414-1.414L13.314 12l4.793-4.793l-1.414-1.414z"
+                    />
+                  </svg>
+                </button>
+
+                <button id="playPause" class="btn">
+                  <svg
+                    id="playIcon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2em"
+                    height="2em"
+                    viewBox="0 0 28 28"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M10.138 3.382C8.304 2.31 6 3.632 6 5.756v16.489c0 2.123 2.304 3.445 4.138 2.374l14.697-8.59c1.552-.907 1.552-3.15 0-4.057z"
+                    />
+                  </svg>
+
+                  <svg
+                    id="pauseIcon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2em"
+                    height="2em"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M6.75 3a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2m6.5 0a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+
+                <button class="btn btnStop btnExtra">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2em"
+                    height="2em"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m19.164 12l-6.207-6.207l-1.414 1.414L16.336 12l-4.793 4.793l1.414 1.414zm-5.65 0L7.307 5.793L5.893 7.207L10.686 12l-4.793 4.793l1.414 1.414z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="message">
+            <div class="text-container">
+              <figure>
+                <img
+                  src="./imgs/decoration/cornerO-min.png"
+                  alt="Imagen"
+                  class="img1"
+                />
+                <img
+                  src="./imgs/decoration/cornerO-min.png"
+                  alt="Imagen"
+                  class="img2"
+                />
+                <img
+                  src="./imgs/decoration/cornerO-min.png"
+                  alt="Imagen"
+                  class="img3"
+                />
+                <img
+                  src="./imgs/decoration/cornerO-min.png"
+                  alt="Imagen"
+                  class="img4"
+                />
+              </figure>
+
+              <div class="p-container">
+                <p class="p1">
+                  Hay eventos en la vida que son muy especiales por si solos,
+                  pero poder compartirlos con quienes más Quiero, los convierte
+                  en momentos únicos e inolvidables.
+                </p>
+                <p class="p2">Te esperamos en mi fiesta</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="Countdown">
+          <h1>Tan solo faltán</h1>
+
+          <h3>Faltan</h3>
+          <div class="countdown-container">
+            <div class="countdown-item">
+              <div class="countdown-number" id="days"></div>
+              <div class="countdown-text">Días</div>
+            </div>
+
+            <p class="separador">:</p>
+
+            <div class="countdown-item">
+              <div class="countdown-number" id="hours"></div>
+              <div class="countdown-text">Horas</div>
+            </div>
+
+            <p class="separador">:</p>
+
+            <div class="countdown-item">
+              <div class="countdown-number" id="minutes"></div>
+              <div class="countdown-text">Minutos</div>
+            </div>
+
+            <p class="separador">:</p>
+
+            <div class="countdown-item">
+              <div class="countdown-number" id="seconds"></div>
+              <div class="countdown-text">Segundos</div>
+            </div>
+          </div>
+
+          <h2>Para este dia tan especial</h2>
+        </section>
+
+        <section id="Info">
+          <figure>
+            <img src="./imgs/flowers/flower3.png" alt="imagen" class="img1" />
+            <img src="./imgs/flowers/flower3.png" alt="imagen" class="img2" />
+
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="imagen"
+              class="img3"
+            />
+            <img
+              src="./imgs/decoration/cornerO-min.png"
+              alt="imagen"
+              class="img4"
+            />
+          </figure>
+
+          <div class="container">
+            <figure></figure>
+
+            <h1>¿Cuando y Donde?</h1>
+
+            <p class="text">
+              A continuación encontrarás el horario y ubicación de los eventos
+              de mi fiesta, así como un botón directo a Google Maps para que te
+              sea más fácil llegar al lugar.
+            </p>
+
+            <div class="divDate">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 16H5V10h14zm0-12H5V6h14zM9 14H7v-2h2zm4 0h-2v-2h2zm4 0h-2v-2h2zm-8 4H7v-2h2zm4 0h-2v-2h2zm4 0h-2v-2h2z"
+                />
+              </svg>
+              <p class="day">SÁBADO</p>
+              <p class="mes">26 ABRIL DEL 2025</p>
+            </div>
+
+            <div class="iglesia">
+              <h2>Iglesia</h2>
+
+              <div class="divHour">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l-2.5 4" />
+                  </g>
+                </svg>
+                <p class="hour">7:00 PM</p>
+              </div>
+
+              <div class="divUbi">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <rect width="24" height="24" fill="none" />
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path d="M13 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Z" />
+                    <path
+                      d="M17.5 9.5c0 3.038-2 6.5-5.5 10.5c-3.5-4-5.5-7.462-5.5-10.5a5.5 5.5 0 1 1 11 0Z"
+                    />
+                  </g>
+                </svg>
+                <p class="ubi">CATERAL CRISTO REY</p>
+                <a
+                  href="https://maps.app.goo.gl/83uYdaDgjGuFYrVR8"
+                  target="_blank"
+                  class="btn"
+                  >Ver en Google Maps</a
+                >
+              </div>
+            </div>
+
+            <div class="salon">
+              <h2>Recepción</h2>
+
+              <div class="divHour">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <rect width="24" height="24" fill="none" />
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l-4 2" />
+                  </g>
+                </svg>
+                <p class="hour">8:30 PM</p>
+              </div>
+
+              <div class="divUbi">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <rect width="24" height="24" fill="none" />
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path d="M13 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Z" />
+                    <path
+                      d="M17.5 9.5c0 3.038-2 6.5-5.5 10.5c-3.5-4-5.5-7.462-5.5-10.5a5.5 5.5 0 1 1 11 0Z"
+                    />
+                  </g>
+                </svg>
+                <p class="ubi">SALÓN DE EVENTOS LAS CyCAS</p>
+                <a
+                  href="https://maps.app.goo.gl/vZqYk4ugkQ4BszKi6"
+                  target="_blank"
+                  class="btn"
+                  >Ver en Google Maps</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="DressCode">
+          <div class="container animate-element">
             <figure>
               <img
                 src="./imgs/decoration/cornerO-min.png"
@@ -129,334 +358,126 @@
               />
             </figure>
 
-            <div class="p-container">
-              <p class="p1">
-                Hay eventos en la vida que son muy especiales por si solos, pero
-                poder compartirlos con quienes más Quiero, los convierte en
-                momentos únicos e inolvidables.
-              </p>
-              <p class="p2">Te esperamos en mi fiesta</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="Countdown">
-        <h1>Tan solo faltán</h1>
-
-        <h3>Faltan</h3>
-        <div class="countdown-container">
-          <div class="countdown-item">
-            <div class="countdown-number" id="days"></div>
-            <div class="countdown-text">Días</div>
-          </div>
-
-          <p class="separador">:</p>
-
-          <div class="countdown-item">
-            <div class="countdown-number" id="hours"></div>
-            <div class="countdown-text">Horas</div>
-          </div>
-
-          <p class="separador">:</p>
-
-          <div class="countdown-item">
-            <div class="countdown-number" id="minutes"></div>
-            <div class="countdown-text">Minutos</div>
-          </div>
-
-          <p class="separador">:</p>
-
-          <div class="countdown-item">
-            <div class="countdown-number" id="seconds"></div>
-            <div class="countdown-text">Segundos</div>
-          </div>
-        </div>
-
-        <h2>Para este dia tan especial</h2>
-      </section>
-
-      <section id="Info">
-        <figure>
-          <img src="./imgs/flowers/flower3.png" alt="imagen" class="img1" />
-          <img src="./imgs/flowers/flower3.png" alt="imagen" class="img2" />
-        </figure>
-
-        <div class="container">
-          <figure>
+            <h1>Código de vestimenta</h1>
+            <p>De Gala</p>
             <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="imagen"
-              class="img3"
+              src="./imgs/decoration/ropa2.png"
+              alt="Imagen"
+              class="img-fancy"
             />
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="imagen"
-              class="img4"
+            <p>Colores restringidos</p>
+            <ul class="colors">
+              <li>Rosa</li>
+              <li>Azul</li>
+              <li>Dorado</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="RSVP">
+          <h1>Confirma tu asistencia</h1>
+
+          <div class="container-text animate-element">
+            <p class="p1">Quiero compartir este momento tan esperado contigo</p>
+            <p class="p2">Por favor ayudanos confirmando tu asistencia</p>
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
             />
-          </figure>
+          </svg>
+          <div class="btns animate-element" >
+            <a
+              href="https://api.whatsapp.com/send?phone=7531575096&text=Holaaa,%20confirmo%20mi%20asistencia%20a%20los%20XV.%20Gracias%20por%20la%20invitaci%C3%B3n."
+              target="_blank"
+              >Confirmar a Xcaret</a
+            >
 
-          <h1>¿Cuando y Donde?</h1>
+            <a
+              href="https://api.whatsapp.com/send?phone=7531059894&text=Holaaa,%20confirmo%20mi%20asistencia%20a%20los%20XV.%20Gracias%20por%20la%20invitaci%C3%B3n."
+              target="_blank"
+              >Confirmar a Mamá</a
+            >
+          </div>
+        </section>
 
-          <p class="text">
-            A continuación encontrarás el horario y ubicación de los eventos de
-            mi fiesta, así como un botón directo a Google Maps para que te sea
-            más fácil llegar al lugar.
-          </p>
-
-          <div class="divDate">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 16H5V10h14zm0-12H5V6h14zM9 14H7v-2h2zm4 0h-2v-2h2zm4 0h-2v-2h2zm-8 4H7v-2h2zm4 0h-2v-2h2zm4 0h-2v-2h2z"
+        <section id="Gifts">
+          <div class="container animate-element">
+            <figure>
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img1"
               />
-            </svg>
-            <p class="day">SÁBADO</p>
-            <p class="mes">26 ABRIL DEL 2025</p>
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img2"
+              />
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img3"
+              />
+              <img
+                src="./imgs/decoration/cornerO-min.png"
+                alt="Imagen"
+                class="img4"
+              />
+            </figure>
+
+            <h1>Regalos</h1>
+            <p>Gracias por formar parte de este dia</p>
+
+            <img
+              src="https://img.icons8.com/ios/50/mail.png"
+              alt="mail"
+              class="letter-img"
+            />
+
+            <p class="tematica">"Lluvia de sobres"</p>
           </div>
+        </section>
 
-          <div class="iglesia">
-            <h2>Iglesia</h2>
+        <section id="Gallery">
+          <h1>Galería</h1>
 
-            <div class="divHour">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 6v6l-2.5 4" />
-                </g>
-              </svg>
-              <p class="hour">7:00 PM</p>
-            </div>
+          <p>Mi sesión de fotos</p>
 
-            <div class="divUbi">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <rect width="24" height="24" fill="none" />
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path d="M13 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Z" />
-                  <path
-                    d="M17.5 9.5c0 3.038-2 6.5-5.5 10.5c-3.5-4-5.5-7.462-5.5-10.5a5.5 5.5 0 1 1 11 0Z"
-                  />
-                </g>
-              </svg>
-              <p class="ubi">CATERAL CRISTO REY</p>
-              <a
-                href="https://maps.app.goo.gl/83uYdaDgjGuFYrVR8"
-                target="_blank"
-                class="btn"
-                >Ver en Google Maps</a
-              >
+          <div class="container">
+            <img src="./imgs/xcaret/img1.jpg" alt="Imagen" />
+            <div class="imgs2">
+              <img
+                src="./imgs/xcaret/img2.jpg"
+                alt="Imagen"
+                class="animate-element"
+              />
+              <img
+                src="./imgs/xcaret/img4.jpg"
+                alt="Imagen"
+                class="animate-element"
+              />
+              <img
+                src="./imgs/xcaret/img3.jpg"
+                alt="Imagen"
+                class="animate-element"
+              />
             </div>
           </div>
 
-          <div class="salon">
-            <h2>Recepción</h2>
+          <p>Los mejores momentos de la vida merecen ser compartidos</p>
 
-            <div class="divHour">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <rect width="24" height="24" fill="none" />
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 6v6l-4 2" />
-                </g>
-              </svg>
-              <p class="hour">8:30 PM</p>
-            </div>
-
-            <div class="divUbi">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <rect width="24" height="24" fill="none" />
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path d="M13 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Z" />
-                  <path
-                    d="M17.5 9.5c0 3.038-2 6.5-5.5 10.5c-3.5-4-5.5-7.462-5.5-10.5a5.5 5.5 0 1 1 11 0Z"
-                  />
-                </g>
-              </svg>
-              <p class="ubi">SALÓN DE EVENTOS LAS CyCAS</p>
-              <a
-                href="https://maps.app.goo.gl/vZqYk4ugkQ4BszKi6"
-                target="_blank"
-                class="btn"
-                >Ver en Google Maps</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="DressCode">
-        <div class="container">
-          <figure>
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img1"
-            />
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img2"
-            />
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img3"
-            />
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img4"
-            />
-          </figure>
-
-          <h1>Código de vestimenta</h1>
-          <p>De Gala</p>
-          <img
-            src="./imgs/decoration/ropa2.png"
-            alt="Imagen"
-            class="img-fancy"
-          />
-          <p>Colores restringidos</p>
-          <ul>
-            <li>Rosa</li>
-            <li>Azul</li>
-            <li>Dorado</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="RSVP">
-        <h1>Confirma tu asistencia</h1>
-
-        <div class="container-text">
-          <p class="p1">Quiero compartir este momento tan esperado contigo</p>
-          <p class="p2">Por favor ayudanos confirmando tu asistencia</p>
-        </div>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="currentColor"
-            d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
-          />
-        </svg>
-        <div class="btns">
-          <a
-            href="#"
-            target="_blank"
-            onclick="confirmarAsistencia('Xcaret', '527531373712')"
-            >Confirmar a Xcaret</a
-          >
-          <a
-            href="#"
-            target="_blank"
-            onclick="confirmarAsistencia('Mamá', '527531059498')"
-            >Confirmar a Mamá</a
-          >
-        </div>
-      </section>
-
-      <section id="Gifts">
-        <div class="container">
-          <figure>
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img1"
-            />
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img2"
-            />
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img3"
-            />
-            <img
-              src="./imgs/decoration/cornerO-min.png"
-              alt="Imagen"
-              class="img4"
-            />
-          </figure>
-
-          <h1>Regalos</h1>
-          <p>Gracias por formar parte de este dia</p>
-
-          <img
-            src="https://img.icons8.com/ios/50/mail.png"
-            alt="mail"
-            class="letter-img"
-          />
-
-          <p class="tematica">"La lluvia de sobres"</p>
-        </div>
-      </section>
-
-      <section id="Gallery">
-        <h1>Galería</h1>
-        <p>Mi sesión de fotos</p>
-        <div class="container">
-          <img src="./imgs/xcaret/img1.jpg" alt="Imagen" />
-          <div class="imgs2">
-            <img src="./imgs/xcaret/img2.jpg" alt="Imagen" />
-            <img src="./imgs/xcaret/img4.jpg" alt="Imagen" />
-            <img src="./imgs/xcaret/img3.jpg" alt="Imagen" />
-            <img src="./imgs/xcaret/img5.jpg" alt="Imagen" />
-          </div>
-        </div>
-        <p>Los mejores momentos de la vida merecen ser compartidos</p>
-
-        <p>Gracias por acompañarme.</p>
-      </section>
-    </main>
-    <script src="./scrips.js"></script>
-  </body>
-</html>
+          <p>Gracias por acompañarme.</p>
+        </section>
+      </main>
+      <script src="./scrips.js"></script>
+    </body>
+  </html>
+</DOCTYPE>
